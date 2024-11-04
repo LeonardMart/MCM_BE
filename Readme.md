@@ -35,7 +35,7 @@ if there is no error anymore,
 ## API Testing
 to test API you can simply use api.http by installing REST Client Extensions on your Visual Studio Code or you can use Postman
 
-this is API List, make sure you change ip address and server running port http://localhost:4000/
+this is API List:
 ### Studio
 - http://localhost:4000/studios/insert  body={"name": string, "capacity": integer}
 - http://localhost:4000/studios/studio/:id
