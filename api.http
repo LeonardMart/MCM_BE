@@ -1,0 +1,138 @@
+
+
+@baseUrl = http://localhost:4000
+
+###
+POST  {{baseUrl}}/studios/insert HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Premiere",
+    "capacity": 100
+}
+
+###
+GET {{baseUrl}}/studios/studio/2 HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{baseUrl}}/studios/all HTTP/1.1
+Content-Type: application/json
+
+###
+PUT {{baseUrl}}/studios/update/3 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Studio 1",
+    "capacity": 100
+}
+
+###
+DELETE  {{baseUrl}}/studios/delete/4 HTTP/1.1
+Content-Type: application/json
+
+
+###
+POST {{baseUrl}}/films/insert HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Doraemon",
+  "description": "Ddventure on the moon",
+  "genre": "Cartoon",
+  "studioId": 5,
+  "duration": 184
+}
+
+
+###
+GET {{baseUrl}}/films/all HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{baseUrl}}/films/film/6 HTTP/1.1
+Content-Type: application/json
+
+
+###
+PUT {{baseUrl}}/films/update/4 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "The Wild Robots",
+  "description": "A journey through jungle",
+  "genre": "Adventure",
+  "studioId":2,
+  "duration": 125
+}
+
+###
+DELETE  {{baseUrl}}/films/delete/3 HTTP/1.1
+Content-Type: application/json
+
+
+###
+POST  {{baseUrl}}/showtimes/insert HTTP/1.1
+Content-Type: application/json
+
+{
+  "filmId": 5,
+  "time": "04-11-2024 12:30"
+}
+
+###
+GET  {{baseUrl}}/showtimes/all HTTP/1.1
+Content-Type: application/json
+
+###
+GET  {{baseUrl}}/showtimes/showtime/2 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT  {{baseUrl}}/showtimes/update/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "filmId": 4,
+  "time": "03-11-2024 18:30"
+}
+
+###
+DELETE  {{baseUrl}}/showtimes/delete/1 HTTP/1.1
+Content-Type: application/json
+
+
+###
+POST  {{baseUrl}}/tickets/insert HTTP/1.1
+Content-Type: application/json
+
+{
+  "seatRow": "K",
+  "seatNumber":27,
+  "showtimeId":2
+}
+
+###
+GET  {{baseUrl}}/tickets/all HTTP/1.1
+Content-Type: application/json
+
+
+###
+GET  {{baseUrl}}/tickets/ticket/3 HTTP/1.1
+Content-Type: application/json
+
+
+###
+PUT  {{baseUrl}}/tickets/update/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "seatRow": "A",
+  "seatNumber":6,
+  "showtimeId":2
+}
+
+###
+DELETE  {{baseUrl}}/tickets/delete/1 HTTP/1.1
+Content-Type: application/json
